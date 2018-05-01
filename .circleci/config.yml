@@ -30,8 +30,6 @@ jobs:
       - save_cache:
           paths:
             - ~/.gradle
-            - ~/buck
-            - ~/android-sdk
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "gradle.properties" }}
       - run:
           name: Run Tests
